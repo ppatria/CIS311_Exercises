@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .Wrap{
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            .Header{
+                width: 100%;
+                height: 130px;
+                background-color: #038c5a;
+            }
+            .WrapMiddle{
+                width: 100%;
+                font-size: 0;
+            }
+            .Left{
+                height: 625px;
+                width: 20.83%;
+                background-color: #03a66a;
+                display: inline-block;
+            }
+            .Middle {
+                height: 625px;
+                width: 68.75%;
+                background-color: #fff;
+                display: inline-block;
+            }
+            .Right {
+                height: 625px;
+                width: 10.41%;
+                background-color: #03a66a;
+                display: inline-block;
+            }
+            .Footer {
+                height: 200px;
+                width: 100%;
+                background-color: #025059;
+            }
+            .CenterMe{
+                color:#ebebeb;
+                font-family:"Oswald", sans-serif;
+                font-size: 2rem;
+                text-transform: uppercase;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .container {
+                font-family: "Oswald", sans-serif;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                padding: 5 1rem;
+            }
+            .item,
+            .last-item{
+                color:#ebebeb;
+                text-decoration: none;
+            }
+            .item{
+                margin-right: 1rem;
+            }
+            .last-item{
+                margin-left:auto;
+            }
+            @media (min-width: 40rem){
+                .Left{
+                    width: 20.83%;
+                    left: 0;
+                    position: relative;
+                }
+                .Middle{
+                    height: 625px;
+                    width: 68.75%;
+                    background-color: #bbbf90;
+                    display:inline-block;
+                }
+                .Right {
+                    height: 625px;
+                    width: 10.41%;
+                    background-color: #03a66a;
+                    display: inline-block;
+                }
+                .Footer{
+                    height: 200px;
+                    width: 100%;
+                    background-color: #025059;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <header class="Header">
+                <div class="container">
+                    <a href="#" class="item">Home</a>
+                    <a href="#" class="item">About Us</a>
+                    <a href="#" class="item">Products</a>
+                    <a href="#" class="item">Policy</a>
+                    <a href="#" class="last-item">Contact Us</a>
+                </div>
+                <div class="CenterMe">Hello, I'm centered with FLexbox!</div>
+            </header>
+            <div class="WrapMiddle">
+                <aside class="Left"></aside>
+                <main class="Middle"></main>
+                <aside class="Right"></aside>
+            </div>
+            <footer class="Footer"></footer>
+        </div>
+    </body>
+</html>
