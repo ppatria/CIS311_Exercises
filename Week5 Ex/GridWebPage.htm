@@ -1,0 +1,74 @@
+<!--
+    Prodeo Et Patria
+    09/24/2024
+-->
+
+<html>
+    <head>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                background: #e8e8e8;
+            }
+
+            .container{
+                background: #fff;
+                display: grid;
+                gap: 10px;
+                grid-template: 
+                    "header header header" auto
+                    "sidebar1 content sidebar2" 1fr
+                    "footer footer footer" auto
+            }
+
+            .item{
+                background: #e8e8e8;
+                text-align:center;
+                border: 0.5px solid #000;
+            }
+
+            .header{
+                grid-area: header;
+            }
+
+            .sidebar1{
+                grid-area: sidebar1;
+            }
+
+            .content{
+                grid-area: content;
+            }
+
+            .sidebar2{
+                grid-area:sidebar2;
+            }
+
+            .footer{
+                grid-area:footer;
+            }
+
+        </style>
+    </head>
+    <body>
+        <body class="container">
+            <div class="item header">
+                <p>Header</p>
+            </div>
+            <div class="item content">
+                <p>Content</p>
+            </div>
+            <div class="item sidebar1">
+                <p>Sidebar 1</p>
+            </div>
+            <div class="item sidebar2">
+                <p>Sidebar 2</p>
+            </div>
+            <div class="item footer">
+                <p>Footer</p>
+            </div>
+        </body>
+    </body>
+</html>
