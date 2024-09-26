@@ -1,0 +1,63 @@
+<!--
+    Prodeo Et Patria
+    09/26/2024
+-->
+<html>
+<head>
+    <style>
+
+
+        a {
+            /* set the color to blue */
+            color: blue;
+        }
+
+        a[href ^= "#"]
+        {
+            /* Internal links, beginning with "#" */
+            background-color: gold;
+        }
+
+        a[href *= "example"]
+        {
+            /* Links with "example" anywhere in the URL */
+            background: silver;
+        }
+
+        a[href *= "insensitive" i]
+        {
+            /* Links with "insensitive" anywhere in the URL, regardless of capitalization */
+            color: cyan;
+        }
+
+        a[href *= "cAsE" ] 
+        {
+            /* Links with "cAsE" anywhere in the URL, with matching capitalization */
+            color: pink;
+        }
+
+        a[href ^= "https://"][href $= ".org"] 
+        {
+            /* Links that end in ".org" */
+            color: green;
+        }
+
+        a[href $= ".org"]
+        {
+            /* Links that start with "https://" and end in ".org" */
+            color:red;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#internal">Internal link</a></li>
+        <li><a href="http://example.com">Example link</a></li>
+        <li><a href="#InSensitive">Insensitive internal link</a></li>
+        <li><a href="http://example.org">Example org link</a></li>
+        <li><a href="https://example.org">Example https org link</a></li>
+    </ul>
+</body>
+</html>
