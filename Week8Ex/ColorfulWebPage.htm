@@ -1,0 +1,229 @@
+<!-- 
+    Prodeo Et Patria
+    10/14/2024
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e8e8e8;
+            display: flex;
+        }
+
+        .container {
+            background: plum;
+            display: grid;
+            gap: 10px;
+            /* fr = "fraction", represents a fraction of available space in the */
+            grid-template-columns: 20% 1fr 20%; /* */
+            grid-template-rows: auto 1fr auto;
+            /* grid-template-rows / grid-template-columns values */
+            grid-template:
+                "header header header" auto
+                "sidebar1 content sidebar2" 1fr
+                /* YOU CAN ONLY MODIFY THE GRID'S ROW WIDTHS ON THE LAST ROW*/
+                "footer footer footer" auto / 20% 1fr 20%;
+            /* Using width: 100vh or height:100% will make the container a fixed size
+                IDK WHY
+            */
+            height: 100vh;
+            width: 100%;
+        }
+
+        .item {
+            background: thistle;
+            text-align: center;
+            border: 0.5px solid #000;
+        }
+
+        .header {
+            grid-area: header;
+            font-family: cursive, "Brush Script MT";
+        }
+
+        .menu-bar {
+            display: flex;
+            padding: 10px 20px;
+            gap: 20px; /* adds Space between menu items */
+        }
+
+        .login-item {
+            float: right; /* item floats right of the menu-box container */
+            margin-left: auto; /* auto fills margin to the left of the item*/
+        }
+
+        .sidebar1 {            
+            grid-area: sidebar1;
+        }
+
+        .sidebar1Services {
+            font-family: cursive, "Brush Script MT";
+            font: bold;
+        }
+
+        .sidebar2 {
+            grid-area: sidebar2;
+            font-family: cursive, "Brush Script MT";
+            font: bold;
+        }
+
+        .content {
+            font-family: cursive, "Brush Script MT";
+            grid-area: content;
+            display: grid;
+            grid-gap: 40px;
+            grid-template:
+                "DenverPictureAndCaption" 55%
+                "PricingGrid" auto / auto
+        }
+
+        .contentImageAndCaption {
+            margin-top: 10px;
+        }
+
+        .denverPicture {
+            max-width: 90%;
+            max-height: 90%;
+
+        }
+
+        .denverPictureCaption{
+            font-size: x-small;
+            margin: 10px;
+        }
+
+        .pricingGrid {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .pricingPlan{
+            font-size: small;
+            background-color: aliceblue;
+            margin: 10px;
+        }
+
+        .footer {
+            grid-area: footer;
+            position: sticky;
+            bottom: 0;
+        }
+
+        
+
+        @media (max-width: 40rem) {
+            .sidebar1, .sidebar2 {
+                display: none; /* Maake sidebars vanish when page width less than 40rem*/
+            }
+
+            .content{
+                width: 100% /* Make content to take full width*/
+            }
+        }
+   
+
+    </style>
+</head>
+<body>
+
+    <!-- The body class makes it so the entire screen (the entire body) is included
+            if it were just a <div> class="" then it would only be a small section
+
+        If you decided to do div class="container", then you'd have to do 2 things:
+            1) add             height: 100vh; 
+                               width: 100vh;
+                in order for the div to fill out the page more
+
+                BUT THERE WILL STILL BE A BIT OF THE BODY SHOWING SO
+            2) add a body{
+                        background-color: [same color as your div]
+                        }
+            
+        -->
+    <body class="container">
+
+        <!-- Notice how the div classes are named "item [SPACE] name"
+            So now, in the styles section you can call out the specific "name"" for a specific div, or
+            merely "item" for all divs. -->
+        <div class="item header">
+
+            <div class="menu-bar">
+                <a href="#" class="menu-item">Home</a>
+                <a href="#" class="menu-item">Products</a>
+                <a href="#" class="menu-item">Policy</a>
+                <a href="#" class="menu-item">About Us</a>
+                <a href="#" class="menu-item">Contact Us</a>
+                <a href="#" class="login-item">Login</a>
+            </div>
+
+            <p>Patria Web Design</p>
+
+        </div>
+        <div class="item content">
+            <div class="contentImageAndCaption">
+                <img 
+                    class="denverPicture"
+                    src="C:\Users\ppatr\Desktop\CIS311 Responsive Web Design\Week8Ex\Denver\Denver001.jpg"
+                    alt="Denver001"
+                 />
+                <p class="denverPictureCaption">
+                    Get the best of both worlds with web design services
+                    that include digital marketing, from search engine optimization to site maintenance.
+                    Building, maintaining, and scaling a site's performance has never been easier.
+                    Subscribe and get your quote now!
+                </p>
+            </div>
+            <div class="pricingGrid">
+                <div class="pricingPlan">
+                    <h2>Basic Plan</h2>
+                    <p>Includes basic features</p>
+                    <span class="price">$10/month</span>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+                <div class="pricingPlan">
+                    <h2>Pro Plan</h2>
+                    <p>Includes advanced features and support</p>
+                    <span class="price">$20/month</span>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+                <div class="pricingPlan">
+                    <h2>Basic Plan</h2>
+                    <p>Includes premium features, support, and priority access</p>
+                    <span class="price">$30/month</span>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="item sidebar1">
+            <div class="sidebar1Services">
+                <p class="sidebar1-items">Revenue technology</p>
+                <p class="sidebar1-items">SEO-friendly</p>
+                <p class="sidebar1-items">Web page creation</p>
+                <p class="sidebar1-items">Custom Design</p>
+                <p class="sidebar1-items">Website copywriting</p>
+                <p class="sidebar1-items">Responsive design</p>
+                <p class="sidebar1-items">Database integration</p>
+                <p class="sidebar1-items">Ecommerce functionality</p>
+                <p class="sidebar1-items">Content Management System (CMS)</p>
+            </div>
+        </div>
+        <div class="item sidebar2">
+            <p>Blog</p>
+            <p>Coming Soon!</p>
+        </div>
+        <div class="item footer">            
+            <p> &copy; 2024 Prodeo Et Patria </p>
+        </div>
+    </body>
+</body>
+</html>
