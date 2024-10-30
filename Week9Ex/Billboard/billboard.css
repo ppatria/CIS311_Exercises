@@ -1,0 +1,41 @@
+/*
+    Prodeo Et Patria
+    10/17/2024
+*/
+
+table{
+    border:1px solid black;
+    border-spacing:0;
+    font-family:Arial;
+    font-size:20px;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+
+caption{
+    font-family:Arial;
+    font-weight:bold;
+    font-size:48px;
+    padding:12px;
+}
+
+th{
+    background-color:navy;
+    border:1px solid black;
+    color:white;
+    font-weight:bold;
+    padding:12px;
+}
+
+td{
+    margin:0;
+    padding:0;
+    text-align:center;
+    vertical-align: middle;
+}
+
+.thisweek{
+    background-color:black;
+    color:white;
+}
